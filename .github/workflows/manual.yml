@@ -41,5 +41,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt 
 
-    - name: execute py script # run movie_recommender.py
-      run: streamlit run movie_recommender.py
+    - name: Run Streamlit App # run movie_recommender.py
+      run: streamlit run movie_recommender.py &
+
+    - name: Wait for Streamlit App to Start
+      run: sleep 10       # Adjust the sleep duration as needed 
+
+    - name: Get Streamlit App URL
+      run: echo "::set-output name=url::http://localhost:8501"
+
+    - name: Open Streamlit App in Browser
+      run: |
+        curl -sSf -o /dev/null ${{ steps.get_url.outputs.url }}

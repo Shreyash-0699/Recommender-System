@@ -51,5 +51,5 @@ jobs:
       
     - name: Open Streamlit App in Browser
       run: |
-        xdg-open https://recommender-system-basic.streamlit.app/
+        brave-browser https://recommender-system-basic.streamlit.app/
         sleep 180

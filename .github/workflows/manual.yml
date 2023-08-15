@@ -49,4 +49,5 @@ jobs:
       
     - name: Open Streamlit App in Browser
       run: |
-        curl -sSf https://recommender-system-basic.streamlit.app/ >/dev/null 2>&1
+        xdg-open https://recommender-system-basic.streamlit.app/
+        sleep 180

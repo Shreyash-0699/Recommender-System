@@ -51,5 +51,5 @@ jobs:
       
     - name: Open Streamlit App in Browser
       run: |
-        google-chrome https://recommender-system-basic.streamlit.app/
+        microsoft-edge https://recommender-system-basic.streamlit.app/
         sleep 180
